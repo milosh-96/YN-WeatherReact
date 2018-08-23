@@ -1,0 +1,40 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css";
+.card {
+    width:90%;
+    margin: 25px auto;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.card .card-heading {
+    font-size: 14px;
+    background: #f2f2f2;
+    color:#333;
+    padding: 7px 7px;
+    border-bottom: 1px solid #ccc;
+}
+.card .card-body {
+    padding: 25px 0;
+    overflow: hidden;
+}
+.card .forecastIcon {
+    font-size: 48px;
+    padding: 0px 10px;
+}
+
+.tempBig {
+    font-size: 36px;
+    padding: 15px;
+    font-weight: bold;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.minTemp {
+    background: #003366;
+    color: #fff;
+}
+.maxTemp {
+    background: #dd0000;
+    color: #fff;
+}
