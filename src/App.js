@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CurrentCondition from './CurrentCondition';
 import ForecastCard from './ForecastCard';
 import './css/main.css';
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
     let display = '...';
     let updated = '<p></p>';
     let location = this.state.params.city;
+    let currentCondition = <div>Učitavanje...</div>;
     if(this.state.updated) {
       updated = <p>Upravo ažurirano.</p>;
     }
@@ -39,6 +41,7 @@ class App extends Component {
           return <ForecastCard key={item.date} forecast={item} />;
       });
       location = this.state.data.results.channel.location.city + ", " + this.state.data.results.channel.location.country;
+      currentCondition = <CurrentCondition forecast={this.state.data.results.channel.item.condition} />;
     }
     else {
       display = <div>Pričekajte...</div>
@@ -46,6 +49,7 @@ class App extends Component {
     return (
       <div id="wrapper">
       <div className="content">
+        {currentCondition}
         <h2>{location}</h2>
         {updated}
         {display}

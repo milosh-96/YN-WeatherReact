@@ -1,0 +1,11 @@
+.temp {
+    font-weight: bold;
+    padding: 7px;
+    background: #d2d2d2;
+}
+.maxTemp {
+    color: #dd0000;
+}
+.minTemp {
+    color: #003366;
+}
