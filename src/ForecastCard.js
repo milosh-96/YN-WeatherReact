@@ -3,19 +3,7 @@ import './css/ForecastCard.css';
 class ForecastCard extends Component {
     
     render() {
-        let weatherIcon;
-        switch(Number(this.props.forecast.code)) {
-
-            case 30:
-            case 34:
-                weatherIcon = "wi-day-cloudy";
-                break;
-            case 47:
-                weatherIcon = "wi-day-thunderstorm";
-                break;
-            default:
-                weatherIcon = "wi-day-sunny"
-        }
+        let weatherIcon = this.props.icon;
     return(
         <div className="card">
         <div className="card-heading">{this.props.forecast.date}</div>
